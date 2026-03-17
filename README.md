@@ -74,7 +74,7 @@ No installation needed. Just clone or download the project and open the HTML fil
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone <my project repo url>
 cd todo-app
 
 # 2. Open in browser
