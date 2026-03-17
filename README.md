@@ -1,6 +1,6 @@
 # To-Do App
 
-A simple and clean browser-based To-Do application built with vanilla JavaScript, HTML, and CSS. Users can add, complete, delete, and filter tasks — with all data persisted in the browser's localStorage so nothing is lost on page refresh.
+A simple and clean browser-based To-Do application built with vanilla JavaScript, HTML5, and CSS3. Users can add, complete, delete, and filter tasks — with all data persisted in the browser's localStorage so nothing is lost on page refresh.
 
 ---
 
@@ -101,7 +101,8 @@ If you are using VS Code, install the [Live Server extension](https://marketplac
 
 ### App Overview
 
-<img width="1440" alt="To-Do App overview" src="https://github.com/user-attachments/assets/1773776644261_image.png" />
+<img width="1011" height="722" alt="image" src="https://github.com/user-attachments/assets/433cee4b-690c-423f-b0a5-2537ce37d5df" />
+
 
 ---
 
