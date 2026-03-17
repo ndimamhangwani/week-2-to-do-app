@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 6 – To-Do App</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1> To-Do App</h1>
+      <p>Week 6 – CRUD + localStorage</p>
+    </header>
+
+    <section class="card">
+      <form id="todo-form" class="row">
+        <input id="todo-input" type="text" placeholder="Add a task…" />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+        <button id="clear-completed" type="button">Clear Completed</button>
+      </div>
+      <p>Remaining tasks: </p>
+ <p id="task-count">0</p> 
+      <ul id="todo-list" class="list"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>&copy; 2026 Week 6 by Ndima Mhangwani</small>
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
