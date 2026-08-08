@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week 6 – To-Do App</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tasks — a running list</title>
+<meta name="description" content="A fast, distraction-free to-do list with full create, read, update, and delete support, saved locally in your browser." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="header">
-      <h1> To-Do App</h1>
-      <p>Week 6 – CRUD + localStorage</p>
+
+  <main class="sheet" aria-labelledby="app-title">
+
+    <header class="sheet__header">
+      <div class="eyebrow">
+        <span class="eyebrow__dot" aria-hidden="true"></span>
+        <span id="today-label"></span>
+      </div>
+      <h1 id="app-title">Tasks</h1>
+      <p class="tagline">A running list, not a guilt trip.</p>
     </header>
 
-    <section class="card">
-      <form id="todo-form" class="row">
-        <input id="todo-input" type="text" placeholder="Add a task…" />
-        <button type="submit">Add</button>
-      </form>
+    <form id="todo-form" class="add-row" autocomplete="off">
+      <label for="todo-input" class="visually-hidden">Add a task</label>
+      <input
+        id="todo-input"
+        name="todo-input"
+        type="text"
+        placeholder="What needs doing?"
+        maxlength="140"
+        required
+      />
+      <button type="submit" class="btn btn--primary">
+        <span>Add</span>
+      </button>
+    </form>
 
-      <div class="filters">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="active">Active</button>
-        <button data-filter="completed">Completed</button>
-        <button id="clear-completed" type="button">Clear Completed</button>
+    <nav class="tabs" aria-label="Filter tasks">
+      <button class="tab active" data-filter="all" type="button" aria-pressed="true">All</button>
+      <button class="tab" data-filter="active" type="button" aria-pressed="false">Active</button>
+      <button class="tab" data-filter="completed" type="button" aria-pressed="false">Completed</button>
+      <button id="clear-completed" class="tab tab--danger" type="button">Clear done</button>
+    </nav>
+
+    <div class="board">
+      <ul id="todo-list" class="list" aria-live="polite"></ul>
+
+      <div id="empty-state" class="empty" hidden>
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M8 20l8 8 16-18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p id="empty-message"></p>
       </div>
-      <p>Remaining tasks: </p>
- <p id="task-count">0</p> 
-      <ul id="todo-list" class="list"></ul>
-    </section>
+    </div>
 
-    <footer class="footer">
+    <footer class="sheet__footer">
+      <p id="task-count" aria-live="polite">0 tasks left</p>
       <small>&copy; 2026 Week 6 by Ndima Mhangwani</small>
     </footer>
+
   </main>
 
   <script src="assets/js/app.js"></script>
